@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/window.css">
+    <link rel="stylesheet" href="css/specific-window.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.7.0.js"
+			  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+			  crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="js/drag.js" defer></script>
+    <script src="js/window-control.js" defer></script>
+    <script src="js/iconLink.js" defer></script>
+    <title>Hirocult</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">
+            <img class="music-folder" src="img/folder.png" alt="">
+            Unreleased Music
+        </div>
+        <div class="flex-item" id="">
+            <img src="img/camcorder.png" alt="">
+            Videos
+        </div>
+        <div class="flex-item">
+            <img src="img/3d.png" alt="">
+            3D Art
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <!-- Content for the bottom bar goes here -->
+        <div class="bottom-bar-content">
+            <btn class="bottom-bar-item" id="stream">
+                <img src="img/cd.png" alt="">
+                Stream my stuff
+            </btn>
+            <btn class="bottom-bar-item" id="music-player">
+                <img src="img/unreleased.png" alt="">
+                Music Player</btn>
+            <div class="bottom-bar-item" id="videoPlayer-icon">
+                <img src="img/camcorder.png" alt="">
+                Video Player
+            </div>
+        </div>
+        <div class="clock">11:11 PM</div>
+    </div>
+
+
+
+<!--Video Player Window-->
+
+<div class="basic-window" id="video-player">
+    <div class="window-header">
+        <div class="name-icon">
+            <img src="img/green-disk.png"alt="" class="corner-img header-item">
+            <span class="directory-title header-item">Video Player</span>
+        </div>
+        <div class="window-controls">
+            <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
+            <div class="top-btn header-item maximize" style="background-image: url('icons/maximize.png');"></div>
+            <div class="top-btn header-item close" style="background-image: url('icons/x.png');"></div>
+        </div>
+    </div>
+    <iframe class="window-content" id="video-player-iframe" src="video-player/index.html" frameborder="0"></iframe>    
+</div>
+
+
+<div class="basic-window" id="discord-window">
+    <div class="window-header">
+        <div class="name-icon">
+            <img src="img/green-disk.png"alt="" class="corner-img header-item">
+            <span class="directory-title header-item">Discord Chat</span>
+        </div>
+        <div class="window-controls">
+            <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
+            <div class="top-btn header-item maximize" style="background-image: url('icons/maximize.png');"></div>
+            <div class="top-btn header-item close" style="background-image: url('icons/x.png');"></div>
+        </div>
+    </div>
+    <iframe class="window-content" id="test-iframe" src="https://discord.com/widget?id=1198095334119837808&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
+</div>
+
+
+<div class="basic-window" id="music-directory-window">
+    <div class="window-header">
+        <div class="name-icon">
+            <img src="img/green-disk.png"alt="" class="corner-img header-item">
+            <span class="directory-title header-item">Music Directory</span>
+        </div>
+        <div class="window-controls">
+            <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
+            <div class="top-btn header-item maximize" style="background-image: url('icons/maximize.png');"></div>
+            <div class="top-btn header-item close" style="background-image: url('icons/x.png');"></div>
+        </div>
+    </div>
+    <iframe class="window-content" id="music-directory-iframe" src="music-directory/index.html" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
+</div>
+
+
+
+</body>
+</html>
+
+
+
+<!--MUSIC WINDOW-->
