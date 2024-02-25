@@ -73,10 +73,6 @@ body{
     text-shadow: 1px 1px 0px #000; /* Optional: gives a retro "3D" effect */
 }
 
-.basic-window{
-
-}
-
 .desktop-container {
     display: flex;
     flex-direction: row;
@@ -157,5 +153,5 @@ body{
 }
 
 .basic-window{
-    scale:.85;
+    scale: 80%;
 }

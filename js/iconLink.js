@@ -1,10 +1,10 @@
 let apps = [
-    { icon: "videoPlayer-icon", window: "video-player", state: "open" },
+    { icon: "videoPlayer-icon", window: "video-player", state: "closed" },
     { icon: "music-player-icon", window: "music-player-window", state: "open" },
     { icon: "unreleased-music-icon", window: "music-directory-window", state: "open" },
-    { icon: "video-folder-icon", window: "video-directory-window", state: "open" },
-    { icon: "about-icon",window:"about-window",state:"open"},
-    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"}
+    { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
+    { icon: "about-icon",window:"about-window",state:"closed"},
+    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"closed"}
 ];
 
 
@@ -28,6 +28,8 @@ $(document).ready(function() {
 
     // Initialize the state of each window based on the 'state' property
     apps.forEach(function(appObj) {
+        console.log(appObj.icon + " is initially " + appObj.state);
+
         if (appObj.state === 'closed') {
             $('#' + appObj.window).addClass('minimized');
         } else {

@@ -15,23 +15,23 @@
     height: 330px;
 }
 
+#music-directory-window{
+    top: 100vw;
+    left: -10vw;
+}
 #video-player{
     top: 20vw;
     left: 50vw;
 }
 
-#music-directory-window{
-    top: 10vw;
-    left: 20vw;
-}
 
 #music-player-iframe{
     width: 400px;
     height: 120px;
 }
 #music-player-window{
-    top: 10vw;
-    left: 50vw;
+    top: 50vw;
+    left: -2vw;
 }
 
 #video-directory-iframe{
