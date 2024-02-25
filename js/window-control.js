@@ -15,3 +15,4 @@ $('.window-controls').on('click', '.minimize', function() {
     thisWindow.toggleClass('minimized');
 });
 
+

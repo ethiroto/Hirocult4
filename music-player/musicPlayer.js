@@ -1,6 +1,7 @@
 normalSongNameArray=['sugar','finally_alone','canAnybody','makefun','thousand','jawless'];
 SecretSongNameArray=['theEnd','run',]; // TO ADD SONGS ADD A NAME HERE
 
+
 let songHowlArray = [];
 let songNameArray=[];
 let songOnDeck = null;
@@ -68,6 +69,12 @@ playButton = $('#play');
 timelineSlider = $('#song-timeline');
 songTimeDisplay = $('.song-time');
 currentSongIndex = 0; // Index of the currently playing song
+
+document.addEventListener('directoryClickFromP',function(e){
+  console.log(capacitySongHowlArray[e.detail.songSent-1]);
+  playCD(capacitySongHowlArray[e.detail.songSent-1],e.detail.songNameSent);
+});
+
 }
 
 siteWork(normalSongNameArray);

@@ -1,0 +1,20 @@
+TO DO:
+-background? 
+    -color picker?
+-where do windows pop up?
+-window pop up animation?
+-Clock
+-Journal window
+-add secret music
+-Journal/Gallery
+
+
+COMPLETE:
+-smoother drag.js 
+-Announcment window
+-hirocult logo?
+-About/Socials
+
+
+IDeas:
+-maybe have "alert" glitch into alter a little bit or something lol.

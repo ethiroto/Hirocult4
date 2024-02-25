@@ -1,12 +1,41 @@
-var testBtn=$('.test-btn');
+var normalSongNameArray = ['sugar', 'finally_alone', 'canAnybody', 'makefun', 'thousand', 'jawless'];
 
+function clearDirectory() {
+    $('.directory-content').empty(); // Clear the directory
+}
 
-var parentDocument = $(window.parent.document);
+function siteWork(songArray) {
+    let directory = $('.directory-content');
 
-var videoIframe = parentDocument.find('#video-player-iframe').contents();
+    clearDirectory();
+    songNameArray = songArray;
 
-testBtn.on('click', function(){
-    console.log('btn clicked');
-    videoIframe.find('body').css('background-color','#a2bb86');
-});
+    // Append song divs to the directory
+    songNameArray.forEach(function(songName, index) {
+        var songDiv = $('<div class="dir-item" id="song' + (index + 1) + '"><img src="../img/wincd.png" alt=""><span>' + songName + '.mp3' + '</span></div>');
+        
+        // Attach click handler to each song div
+        songDiv.on('click', createClickHandler(index + 1, songName));
+        
+        // Add the song div to the directory
+        directory.append(songDiv);
+    });
+}
 
+function createClickHandler(songNumber, songName) {
+    return function() {
+        var songSent = String(songNumber);
+        var songNameSent = songName;
+
+        var directoryEvent = new CustomEvent('directoryClick', {
+            detail: {
+                'songSent': songSent,
+                'songNameSent': songNameSent
+            }
+        });
+
+        window.parent.dispatchEvent(directoryEvent);
+    };
+}
+
+siteWork(normalSongNameArray);

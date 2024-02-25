@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Windows95';
+    src: url('../fonts/w95fa.woff2') format('woff2');
+    /* Add 'format' based on your font file format */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-color:bisque;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content:flex-start;
+    flex-wrap:wrap;
+    width: 96vw;
+    height:95vh;
+}
+.video img{
+    width: 60px;
+    height: 60px;
+    align-self: center;
+}
+.video{
+    margin: 10px;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    font-family: 'Windows95', sans-serif;
+}
+
+
+.video {
+    /* ... existing styles ... */
+    transition: background-color 0.15s, border-color 0.15s; /* Smooth transitions for background and border color */
+    background-color: transparent; /* Default transparent background */
+    border: 2px solid transparent; /* Default transparent border */
+    cursor: pointer;
+}
+
+.video:hover {
+    background-color: #ccecf0; /* Light blue color on hover */
+    border-color: #b4ecfc; /* Darker light blue border on hover */
+}

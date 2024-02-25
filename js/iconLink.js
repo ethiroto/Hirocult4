@@ -1,18 +1,39 @@
+let apps = [
+    { icon: "videoPlayer-icon", window: "video-player", state: "closed" },
+    { icon: "music-player-icon", window: "music-player-window", state: "open" },
+    { icon: "unreleased-music-icon", window: "music-directory-window", state: "closed" },
+    { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
+    { icon: "about-icon",window:"about-window",state:"open"},
+    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"}
+];
 
-//HERE ADD THE ICON AND THEN THE WINDOW IDS
-let iconLib={"videoPlayer-icon":"video-player"};
 
-
-//Toggles the minimized class on the window when icon is clicked
-function minMax(icon,window){
-    $(icon).on('click',function(){
-        $(window).toggleClass('minimized');
+$(document).ready(function() {
+    // Generalized event delegation for handling clicks on app icons and desktop items
+    $('body').on('click', '.bottom-bar-item, .desktop-item', function() {
+        // Get the id of the clicked icon
+        var clickedIconId = this.id;
+        // Find the corresponding app object
+        var appObj = apps.find(app => app.icon === clickedIconId);
+        if (appObj) {
+            // Toggle the 'minimized' class on the corresponding window
+            $('#' + appObj.window).toggleClass('minimized');
+            // Increment and set the highest z-index for the current window
+            highestZIndex++;
+            $('#' + appObj.window).css('z-index', highestZIndex);
+            // Update the state of the app
+            appObj.state = appObj.state === 'open' ? 'closed' : 'open';
+        }
     });
-};
 
-//weird way of getting key values in js
-for (iconKey in iconLib) {
-    windowValue=iconLib[iconKey];
-    //running each one through the function
-    minMax('#' + iconKey, '#' + windowValue);
-};
+    // Initialize the state of each window based on the 'state' property
+    apps.forEach(function(appObj) {
+        if (appObj.state === 'closed') {
+            $('#' + appObj.window).addClass('minimized');
+        } else {
+            $('#' + appObj.window).removeClass('minimized');
+            $('#' + appObj.window).css('z-index', ++highestZIndex);
+        }
+    });
+});
+

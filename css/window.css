@@ -28,6 +28,10 @@
 }
 
 
+.basic-window {
+    transform: translate3d(0, 0, 0);
+}
+
 .directory-title {
     color:white;
     font-size: 14px;
@@ -67,7 +71,4 @@
 
 .minimized{
     display: none;
-}
-
-.closed{
 }

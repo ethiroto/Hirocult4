@@ -1,0 +1,39 @@
+/* BOTTOM BAR TRANSITIONS*/
+.bottom-bar-item{
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for background and border color */
+}
+
+.bottom-bar-item:hover {
+    background-image: repeating-linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    background-size: 100% 4px;
+    background-color: #add8e6; /* Light blue background to simulate a retro CRT screen effect */
+    border-color: #00ffff #008080 #008080 #00ffff; /* Neon-like cyan border colors for a glowing effect */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Soft glow effect around the item */
+}
+
+.bottom-bar-item:active {
+    border-style: inset; /* Invert the 3D border effect to appear pressed */
+    background-color: #d0d0d0; /* Slightly darker background to show it's being pressed */
+}
+
+
+
+/* DESKTOP ICON TRANSITIONS*/
+.desktop-item {
+    /* ... existing styles ... */
+    transition: background-color 0.15s, border-color 0.15s; /* Smooth transitions for background and border color */
+    background-color: transparent; /* Default transparent background */
+    border: 2px solid transparent; /* Default transparent border */
+}
+
+.desktop-item:hover {
+    background-color: #ccecf0; /* Light blue color on hover */
+    border-color: #b4ecfc; /* Darker light blue border on hover */
+}
+
