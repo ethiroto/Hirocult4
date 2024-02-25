@@ -1,0 +1,161 @@
+html, body {
+    overflow: hidden; /* Prevent scrolling in both directions */
+    position: fixed; /* Prevent scrolling and keep the viewport stationary */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    top: 0;
+    left: 0;
+  }
+
+
+/*to change the iframe size scale down for mobile*/
+
+  
+@font-face {
+    font-family: 'Windows95';
+    src: url('../fonts/w95fa.woff2') format('woff2');
+    /* Add 'format' based on your font file format */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-color: #bebee7;
+}
+  
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px; /* Adjust to match the height in the image */
+    background-color: #c0c0c0; /* Grey background similar to the one in the image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Side padding for content */
+    border-top: 1px solid rgb(149, 147, 147)cfc; /* Solid top border */
+    box-shadow: inset 0 1px 0 #ffffff; /* Top inner shadow for a beveled effect */
+}
+
+.bottom-bar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font: 16px 'Windows95', sans-serif;
+}
+
+.bottom-bar-item {
+    display: flex;
+    margin-right: 3px;
+    padding: 0px 3px; /* Padding inside each item */
+    border-width: 2px; /* Width of the border */
+    border-style: outset; /* 3D border effect */
+    border-color: #ffffff #808080 #808080 #ffffff; /* Light color on top and left, dark on bottom and right */
+    text-align: center; /* Center the text inside the item */
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Change mouse cursor to indicate it's clickable */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align content to the left */
+    width: 160px; /* Fixed width */
+}
+
+
+.bottom-bar-item img{
+    max-width: 30px;
+    height: auto;
+}
+
+#clock {
+    background-color: #000080; /* Navy blue background */
+    color: white;
+    font-family: 'Windows95', sans-serif;
+    text-shadow: 1px 1px 0px #000; /* Optional: gives a retro "3D" effect */
+}
+
+.basic-window{
+
+}
+
+.desktop-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 95vh;   
+    padding-top: 25px;
+    padding-left: 30px;
+  }
+
+.desktop-item {
+    width:80px;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-align:center;
+    font: 16px 'Windows95', sans-serif;
+    cursor: pointer;
+    margin-bottom:30px;
+  }
+
+.desktop-item img{
+    width: 50px;
+    height: auto;
+}
+
+.end-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    display:none;
+}
+.end-bar-item{
+    padding: 5px 10px;
+    width:5px;
+}
+
+#occult-gif img{
+    height:30px;
+    width:auto;
+    position: relative;
+    left:22px;
+}
+#color-picker{
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+#color-picker-popup {
+    width: 20px; /* Adjust the size as needed */
+    height: 100px;
+    background-color: #C0C0C0; /* Classic Windows 95 light gray */
+    border: 2px solid #000; /* Dark border for that classic look */
+    position: absolute; /* Or fixed, depending on how you want to position it */
+    bottom: 50px; /* Position it above the bottom of the viewport */
+    right: 90px; /* Adjust based on your layout */
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.color-option {
+    width: 100%; /* Adjust based on the size of the popup */
+    height: 50%; /* Making the color options squares */
+    cursor: pointer; /* Indicates you can interact with the colors */
+}
+
+#occult-gif-container{
+    position: absolute;
+    z-index: -2;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.basic-window{
+    scale:.85;
+}

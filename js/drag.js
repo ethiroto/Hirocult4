@@ -14,7 +14,7 @@ $('.basic-window').on("drag", function(){
 $(function() {
     $('.basic-window').draggable({
         start: function(event, ui) {
-            $('body').append('<div id="drag-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;"></div>');
+            $('body').append('<div id="drag-overlay" style="position:fixed;top:50;left:50;width:100%;height:100%;z-index:99999;"></div>');
         },
         stop: function(event, ui) {
             $('#drag-overlay').remove();

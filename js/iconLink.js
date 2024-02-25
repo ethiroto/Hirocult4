@@ -1,8 +1,8 @@
 let apps = [
-    { icon: "videoPlayer-icon", window: "video-player", state: "closed" },
+    { icon: "videoPlayer-icon", window: "video-player", state: "open" },
     { icon: "music-player-icon", window: "music-player-window", state: "open" },
-    { icon: "unreleased-music-icon", window: "music-directory-window", state: "closed" },
-    { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
+    { icon: "unreleased-music-icon", window: "music-directory-window", state: "open" },
+    { icon: "video-folder-icon", window: "video-directory-window", state: "open" },
     { icon: "about-icon",window:"about-window",state:"open"},
     {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"}
 ];
