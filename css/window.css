@@ -9,10 +9,15 @@
 
 @media (max-width: 600px) {
     .basic-window {
-        scale:.6;
+        scale:.7;
     }
 }
 
+@media (max-width: 400px) {
+    .basic-window {
+        scale:.6;
+    }
+}
 .window-header {
     background: linear-gradient(to right, navy, #1084d0); /* Gradient */
     display: flex;

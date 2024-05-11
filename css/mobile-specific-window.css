@@ -9,9 +9,10 @@
     width: 575px;
     height: 330px;
 }
-#video-player{
-    top: 20vw;
-    left: -40%;
+#video-player {
+    position: absolute;  /* Position it relative to the nearest positioned ancestor */
+    top: 40%;            /* Position the top edge of the element at the center of the viewport */
+    left: -100px;           /* Position the left edge of the element at the center of the viewport */
 }
 
 #music-directory-iframe{
