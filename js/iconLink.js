@@ -4,7 +4,7 @@ let apps = [
     { icon: "unreleased-music-icon", window: "music-directory-window", state: "closed" },
     { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
     { icon: "about-icon",window:"about-window",state:"closed"},
-    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"closed"}
+    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"}
 ];
 
 

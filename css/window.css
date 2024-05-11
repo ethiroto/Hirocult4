@@ -13,9 +13,14 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .basic-window {
         scale:.6;
+    }
+}
+@media (max-width: 400px) {
+    .basic-window {
+        scale:.5;
     }
 }
 .window-header {

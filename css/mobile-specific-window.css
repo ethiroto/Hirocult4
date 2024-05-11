@@ -9,10 +9,12 @@
     width: 575px;
     height: 330px;
 }
+
 #video-player {
-    position: absolute;  /* Position it relative to the nearest positioned ancestor */
-    top: 40%;            /* Position the top edge of the element at the center of the viewport */
-    left: -100px;           /* Position the left edge of the element at the center of the viewport */
+    position:fixed;
+    top:40%;
+    margin-left:-90px ;
+
 }
 
 #music-directory-iframe{
