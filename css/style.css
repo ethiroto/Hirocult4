@@ -5,9 +5,15 @@
     font-weight: normal;
     font-style: normal;
   }
-
+  html, body {
+    overflow: hidden; /* Prevent scrolling in both directions */
+    position: fixed; /* Prevent scrolling and keep the viewport stationary */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
 body{
     background-color: #bebee7;
+    
 }
   
 .bottom-bar {
@@ -51,6 +57,34 @@ body{
 .bottom-bar-item img{
     max-width: 30px;
     height: auto;
+}
+
+.app-expand .bottom-bar-item{
+    display: flex;
+    margin-right: 3px;
+    margin-top:2px;
+    padding: 0px 3px; /* Padding inside each item */
+    border-width: 2px; /* Width of the border */
+    border-style: outset; /* 3D border effect */
+    background-color: #c0c0c0;
+    border-color: #ffffff #808080 #808080 #ffffff; /* Light color on top and left, dark on bottom and right */
+    text-align: center; /* Center the text inside the item */
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Change mouse cursor to indicate it's clickable */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align content to the left */
+    width: 160px; /* Fixed width */
+}
+
+.app-expand-item img{
+    max-width: 30px;
+    height: auto;
+}
+
+.app-expand{
+    position:absolute;
+    bottom:43px;
+    font-family: 'Windows95', sans-serif;
 }
 
 #clock {
@@ -136,4 +170,11 @@ body{
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+@media (min-width: 600px) {
+    .app-expand {
+        display: none;
+    }
 }

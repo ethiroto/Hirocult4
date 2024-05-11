@@ -1,5 +1,6 @@
 var bottomBarContentHtml =$('.bottom-bar-content').html();
 var bottomBarContent=$('.bottom-bar-content');
+var basicWindow =$('.basic-window');
 $(document).ready(function() {
 
     //Find the existing apps and html
@@ -27,8 +28,14 @@ $(document).ready(function() {
   function mobileMode(){
     console.log('going mobile');
     bottomBarContent.html('<btn class="bottom-bar-item" id="apps-icon"><img src="img/folder.png" alt="">Apps</btn>');
+    isMobile=true;
+    console.log(mobileMode);
 
   }
   function desktopMode(){
     bottomBarContent.html(bottomBarContentHtml)
+    isMobile=false;
+    console.log(mobileMode);
   }
+
+

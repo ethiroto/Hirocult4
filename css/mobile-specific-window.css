@@ -9,6 +9,10 @@
     width: 575px;
     height: 330px;
 }
+#video-player{
+    top: 20vw;
+    left: -40%;
+}
 
 #music-directory-iframe{
     width: 470px;
@@ -16,22 +20,17 @@
 }
 
 #music-directory-window{
-    top: 100vw;
-    left: -10vw;
+    top: 100px;
+    left: -40px;
 }
-#video-player{
-    top: 20vw;
-    left: 50vw;
-}
-
 
 #music-player-iframe{
     width: 400px;
     height: 120px;
 }
 #music-player-window{
-    top: 50vw;
-    left: -2vw;
+    top: 10vw;
+    left: 50vw;
 }
 
 #video-directory-iframe{

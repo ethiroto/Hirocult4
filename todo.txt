@@ -18,3 +18,10 @@ COMPLETE:
 
 IDeas:
 -maybe have "alert" glitch into alter a little bit or something lol.
+
+
+For mobile:
+-Lock the screen dimensions, so no flexibility,
+-Adjust the window sizes
+-Figure out window popup
+-Fix the x buttons
