@@ -18,6 +18,7 @@ $(document).ready(function() {
   
     // Apply changes on initial load
     applyChangesForWindowSize();
+    
   
     // Re-apply changes on window resize
     $(window).resize(function() {
@@ -37,8 +38,6 @@ $(document).ready(function() {
     isMobile=false;
     console.log(mobileMode);
   }
-
-
 
 
   

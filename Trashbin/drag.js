@@ -1,3 +1,4 @@
+/*
 window.onload = function() {
   var windows = document.querySelectorAll('.basic-window');
   var highestZIndex = 0; // This variable will keep track of the highest z-index so far.
@@ -47,4 +48,4 @@ window.onload = function() {
           makeDraggable(windowHeader, window);
       }
   });
-};
+};*/

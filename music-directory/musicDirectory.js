@@ -16,6 +16,10 @@ function siteWork(songArray) {
         
         // Attach click handler to each song div
         songDiv.on('click', createClickHandler(index + 1, songName));
+        songDiv.on('click',function(){
+
+
+        });
         
         // Add the song div to the directory
         directory.append(songDiv);
@@ -39,3 +43,4 @@ function createClickHandler(songNumber, songName) {
 }
 
 siteWork(normalSongNameArray);
+

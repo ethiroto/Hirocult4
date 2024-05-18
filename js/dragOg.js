@@ -1,7 +1,9 @@
-$(function() {
-    // Delay the initialization
+
+    /* Delay the initialization
+    $(function() {
         // Initialize draggable with handle
-        $('.basic-window').draggable({ handle: '.window-header' ,cursorAt: {top:50,left: 200}}); //ADJUST TOP AND LEFT TO ADJUST THE DRAG POINT FOR MOBILE
+        $('.basic-window').draggable({ handle: '.window-header' ,cursorAt: {}}); //ADJUST TOP AND LEFT TO ADJUST THE DRAG POINT FOR MOBILE
+
 
         // Increase z-index on drag
         var highestZIndex = 0;
@@ -9,7 +11,7 @@ $(function() {
             highestZIndex++;
             $(this).css('z-index', highestZIndex);
         });
-        
+
         // Manage drag overlay
         $('.basic-window').draggable({
             start: function(event, ui) {
@@ -21,3 +23,4 @@ $(function() {
         });
 
 });
+*/

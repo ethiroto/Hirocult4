@@ -1,9 +1,11 @@
 TO DO:
+-FIX CLOCK X
+-Fix Drag for comp
+
 -background? 
     -color picker?
 -where do windows pop up?
 -window pop up animation?
--Clock
 -Journal window
 -add secret music
 -Journal/Gallery

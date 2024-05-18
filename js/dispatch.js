@@ -5,6 +5,7 @@ window.addEventListener('directoryClick', function(e) {
     // Check if the iframe has completely loaded before dispatching the event
     if (musicPlayerIframe.contentDocument) {
         musicPlayerIframe.contentDocument.dispatchEvent(customEvent);
+        
     } else {
         console.error('The contentDocument of the iframe is not accessible.');
     }

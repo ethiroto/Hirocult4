@@ -13,7 +13,7 @@
 #video-player {
     position:fixed;
     top:40%;
-    margin-left:-90px ;
+    left:-95px;
 
 }
 
@@ -23,8 +23,8 @@
 }
 
 #music-directory-window{
-    top: 100px;
-    left: -40px;
+    top: 35vh;
+    left: -50px;
 }
 
 #music-player-iframe{
@@ -32,8 +32,8 @@
     height: 120px;
 }
 #music-player-window{
-    top: 10vw;
-    left: 50vw;
+    top: 55vw;
+    left: 5vw;
 }
 
 #video-directory-iframe{
@@ -41,7 +41,7 @@
     height: 200px;
 }
 #video-directory-window{
-    top: 0vw;
+    top: 20vw;
     left: 20vw;
 }
 
@@ -59,6 +59,6 @@
     height: 260px;
 }
 #about-window{
-    top: 10vw;
-    left: 20vw;
+    top: 0vw;
+    left: 5vw;
 }

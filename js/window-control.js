@@ -1,3 +1,4 @@
+/* THESE WERE MOVED TO ICON LINK
 //close window
 $('.window-controls').on('click', '.close', function() {
     console.log('top button clicked');
@@ -6,7 +7,6 @@ $('.window-controls').on('click', '.close', function() {
     thisWindow.toggleClass('minimized');
     let iframe=thisWindow.find('iframe');
     iframe.attr('src', iframe.attr('src'));
-
 });
 
 //MINIMIZE
@@ -16,3 +16,4 @@ $('.window-controls').on('click', '.minimize', function() {
 });
 
 
+*/

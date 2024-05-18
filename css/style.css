@@ -29,6 +29,7 @@ body{
     padding: 0 10px; /* Side padding for content */
     border-top: 1px solid rgb(149, 147, 147)cfc; /* Solid top border */
     box-shadow: inset 0 1px 0 #ffffff; /* Top inner shadow for a beveled effect */
+    z-index: 3000;
 }
 
 .bottom-bar-content {
@@ -130,6 +131,7 @@ body{
 }
 .end-bar-item{
     padding: 5px 10px;
+    
 }
 
 #occult-gif img{
@@ -177,4 +179,23 @@ body{
     .app-expand {
         display: none;
     }
+}
+
+@media (max-width: 453px){
+    #clock{
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+.window-drag-area {
+    position: absolute; /* Positions the drag area absolutely within the window-header */
+    left: 0; /* Starts from the left edge */
+    top: 0; /* Starts from the top edge */
+    right: 70px;
+    bottom: 0; /* Extends to the bottom of the container */
+    height:37px;
 }
