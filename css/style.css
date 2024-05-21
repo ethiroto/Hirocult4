@@ -147,22 +147,23 @@ body{
 
 
 #color-picker-popup {
-    width: 20px; /* Adjust the size as needed */
-    height: 100px;
-    background-color: #C0C0C0; /* Classic Windows 95 light gray */
-    border: 2px solid #000; /* Dark border for that classic look */
-    position: absolute; /* Or fixed, depending on how you want to position it */
-    bottom: 50px; /* Position it above the bottom of the viewport */
-    right: 90px; /* Adjust based on your layout */
-    display: flex;
+    width: 15px; /* Adjust the size as needed */
+    height: 90px;
+    bottom: 45px; /* Position it above the bottom of the viewport */
+    position: fixed;
+    margin-left:8px;
+    display: none;
     flex-direction:column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
 }
 
 .color-option {
     width: 100%; /* Adjust based on the size of the popup */
-    height: 50%; /* Making the color options squares */
+    height: 16px; /* Making the color options squares */
+    border-width: 2px; /* Width of the border */
+    border-style: outset; /* 3D border effect */
+    border-color: #ffffff #808080 #808080 #ffffff;
     cursor: pointer; /* Indicates you can interact with the colors */
 }
 

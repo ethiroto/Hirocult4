@@ -31,6 +31,7 @@ $(document).ready(function() {
     bottomBarContent.html('<btn class="bottom-bar-item" id="apps-icon"><img src="img/folder.png" alt="">Apps</btn>');
     isMobile=true;
     console.log(mobileMode);
+    toggleStyles();
 
   }
   function desktopMode(){
@@ -42,6 +43,13 @@ $(document).ready(function() {
 
   
 
-
+  function toggleStyles() {
+    var stylesheet = document.getElementById('window-specific');
+    if (stylesheet.getAttribute('href') === 'css/specific-window.css') {
+        stylesheet.setAttribute('href', 'css/mobile-specific-window.css');
+    } else {
+        stylesheet.setAttribute('href', 'css/specific-window.css');
+    }
+}
 
 

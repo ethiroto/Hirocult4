@@ -65,10 +65,21 @@
     background-position: center;
     background-size: contain;
     background-color: #c0c0c0;
-    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.2), inset 2px 2px 2px rgba(255,255,255,0.2);
-    border: 1px solid #000;
+    border-width: 2px; /* Width of the border */
+    border-style: outset; /* 3D border effect */
+    border-color: #ffffff #808080 #808080 #ffffff;
     box-sizing: border-box;
     cursor:pointer;
+}
+
+.minimize{
+    background-color:#f0f9a8;
+}
+.maximize{
+    background-color:#abfcb8;
+}
+.close{
+    background-color:#fd857b;
 }
 
 .corner-img {

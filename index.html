@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/window.css">
-    <link rel="stylesheet" href="css/mobile-specific-window.css">
+    <link rel="stylesheet" href="css/specific-window.css" id="window-specific">
     <link rel="stylesheet" href="css/transitions.css">
     <link rel="icon" type="image/png" href="img/cat.png">
     <script
@@ -64,9 +64,16 @@
         </div>
         <div class="end-bar">
             <div class="end-bar-item" id="occult-gif">
-                <img src="img/occult5.gif" alt="">
+                <img src="img/occult5.gif" draggable="false" alt="">
             </div> 
-            <div class="end-bar-item" id="color-picker"><img src="img/blocks-window.png" alt=""></div>
+            <div class="end-bar-item" id="color-picker"><img src="img/blocks-window.png" draggable="false" alt="">
+                <div id="color-picker-popup">
+                    <div class="color-option" id="color-option-1" style="background-color: #FF0000;"></div> <!-- Red -->
+                    <div class="color-option" id="color-option-2" style="background-color: #0000FF;"></div> <!-- Blue -->
+                    <div class="color-option" id="color-option-3" style="background-color: #00FF00;"></div> <!-- Green -->
+                    <div class="color-option" id="color-option-4"style="background-color: #FFFF00;"></div> <!-- Yellow -->
+                </div>
+            </div>
             <div class= "end-bar-item" id="clock">11:11 PM</div>
         </div>
 
@@ -187,14 +194,6 @@
 </div>
 
 
-
-
-<div id="color-picker-popup" style="display: none;">
-    <div class="color-option" style="background-color: #FF0000;"></div> <!-- Red -->
-    <div class="color-option" style="background-color: #0000FF;"></div> <!-- Blue -->
-    <div class="color-option" style="background-color: #00FF00;"></div> <!-- Green -->
-    <div class="color-option" style="background-color: #FFFF00;"></div> <!-- Yellow -->
-</div>
 
 
 </body>

@@ -1,14 +1,9 @@
 TO DO:
--FIX CLOCK X
--Fix Drag for comp
-
--background? 
-    -color picker?
--where do windows pop up?
+-add secret music
 -window pop up animation?
 -Journal window
--add secret music
 -Journal/Gallery
+-Window Placement for Desktop
 
 
 COMPLETE:
@@ -16,6 +11,11 @@ COMPLETE:
 -Announcment window
 -hirocult logo?
 -About/Socials
+-FIX CLOCK X
+-Fix Drag for comp X
+-where do windows pop up? X
+-background? 
+    -color picker?
 
 
 IDeas:
