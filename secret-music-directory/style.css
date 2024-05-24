@@ -64,6 +64,7 @@
     margin-top: 40%;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     cursor: pointer;
+    padding:10px;
 }
 
 .dir-item:hover {
