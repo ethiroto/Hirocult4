@@ -38,3 +38,16 @@ window.addEventListener('videoDirectoryClick', function(e) {
         console.error('The contentDocument of the iframe is not accessible.');
     }
 });
+
+
+window.addEventListener('unlockSignal',function(){
+    var musicPlayerIframe = $('#music-player-iframe').get(0);
+    var customEvent = new CustomEvent('unlockSignalFromP');
+    console.log('unlocked from dispatch');
+    if (musicPlayerIframe.contentDocument) {
+        musicPlayerIframe.contentDocument.dispatchEvent(customEvent);
+        
+    } else {
+        console.error('The contentDocument of the iframe is not accessible.');
+    }
+});

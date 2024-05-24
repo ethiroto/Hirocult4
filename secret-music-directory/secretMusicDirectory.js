@@ -40,6 +40,14 @@ function createClickHandler(songNumber, songName) {
     };
 }
 
+
+function unlockSignal() {
+    var unlockSignal = new CustomEvent('unlockSignal');
+    window.parent.dispatchEvent(unlockSignal);
+}
+
+
+
 siteWork(songFiles);
 
 
@@ -94,6 +102,7 @@ function checkPassword(){
         // Add fade-out class to trigger the animation
         passwordLock.addClass('fade-away');
         $('#unlockSound')[0].play();
+        unlockSignal();
             
         // Remove the element from the DOM after the animation completes
         setTimeout(function() {

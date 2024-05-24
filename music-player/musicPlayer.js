@@ -46,25 +46,25 @@ $(document).on('directoryClickFromP', function(e) {
     playCD(songs[e.detail.songNameSent], e.detail.songNameSent);
   });
 
-$(document).on('secretDirectoryClickFromP', function(e) {
-    // Append secret songs to songNames and songs object if not already added
-    console.log(songNames.length+secretSongNames.length);
-    if (playlistLength != (initialSongNamesLength+secretSongNames.length)) {
-        console.log('condition satisfied');
-        for (let i = 0; i < secretSongNames.length; i++) {
-            let songName = secretSongNames[i];
-            songNames.push(songName);  // Add to songNames array
-            playlistLength = songNames.length;
-            songs[songName] = new Howl({
-                src: ['songs/' + secretSongNames[i] + '.mp3'],
-                volume: 1.0
-            });
-        }
-        // Update playlistLength to include secret songs
+//WHEN SECRET FOLDER GETS UNLOCKED, SIGNAL GETS SENT HERE SO THEY CAN BE ADDED TO THE SONGNAMES
+$(document).on('unlockSignalFromP', function() {
+if (playlistLength != (initialSongNamesLength+secretSongNames.length)) {
+    for (let i = 0; i < secretSongNames.length; i++) {
+        let songName = secretSongNames[i];
+        songNames.push(songName);  // Add to songNames array
         playlistLength = songNames.length;
-        console.log(songNames);
+        songs[songName] = new Howl({
+            src: ['songs/' + secretSongNames[i] + '.mp3'],
+            volume: 1.0
+        });
     }
-    console.log(songs[e.detail.songNameSent]);
+    // Update playlistLength to include secret songs
+    playlistLength = songNames.length;
+}
+});
+
+//LISTEN FOR CLICK FROM SECRET DIRECTORY
+$(document).on('secretDirectoryClickFromP', function(e) {
     playCD(songs[e.detail.songNameSent], e.detail.songNameSent);
 });
 
