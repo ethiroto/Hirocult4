@@ -6,6 +6,21 @@ colorPickerPopup= $("#color-picker-popup")
 
 colors={"#color-option-1":"#87bb93","#color-option-2":"#ff9663","#color-option-3":"#ffb0c9","#color-option-4":"#bebee7"}
 
+function getColorValueByIndex(index) {
+    const values = Object.values(colors); // Get an array of values
+    if (index >= 0 && index < values.length) {
+      return values[index];
+    } else {
+      return null; // Or throw an error if index is out of bounds
+    }
+  }
+
+
+  const randomIndex = Math.floor(Math.random() * Object.keys(colors).length); 
+
+  document.body.style.backgroundColor = getColorValueByIndex(randomIndex); 
+  
+
 
 
 // Function to toggle the display of an element

@@ -36,7 +36,7 @@
     <div class="desktop-container">
         <div class="desktop-item" id="unreleased-music-icon">
             <img class="music-folder" src="img/unreleased_music.png" alt="">
-            Unreleased Music
+            Demos (Unreleased Music)
         </div>
         <div class="desktop-item" id="video-folder-icon">
             <img src="img/folder.png" alt="">
@@ -44,14 +44,22 @@
         </div>
         <div class="desktop-item" id="about-icon">
             <img src="img/3d.png" alt="">
-            WHO?WHAT?WHERE?
+            ???
+        </div>
+        <div class="desktop-item" id="secret-music-icon">
+            <img src="img/secret-music.png" alt="">
+            Secret Music
+        </div>
+        <div class="desktop-item" id="shop-icon">
+            <img src="img/shop.png" alt="">
+            Shop
         </div>
     </div>
     <div class="bottom-bar">
         <!-- Content for the bottom bar goes here -->
         <div class="bottom-bar-content">
             <btn class="bottom-bar-item" id="music-player-icon">
-                <img src="img/unreleased.png" alt="">
+                <img src="img/musicplayer.png" alt="">
                 Music Player</btn>
             <div class="bottom-bar-item" id="videoPlayer-icon">
                 <img src="img/camcorder.png" alt="">
@@ -79,7 +87,7 @@
 
         <div class="app-expand">
             <btn class="bottom-bar-item" id="music-player-icon">
-                <img src="img/unreleased.png" alt="">
+                <img src="img/musicplayer.png" alt="">
                 Music Player
             </btn>
             <div class="bottom-bar-item" id="videoPlayer-icon">
@@ -116,7 +124,7 @@
         <div class="window-drag-area"></div>
         <div class="name-icon">
             <img src="img/unreleased_music.png"alt="" class="corner-img header-item">
-            <span class="directory-title header-item">Unreleased Music</span>
+            <span class="directory-title header-item">Music I Won't Release</span>
         </div>
         <div class="window-controls">
             <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
@@ -127,11 +135,28 @@
     <iframe class="window-content" id="music-directory-iframe" src="music-directory/index.html" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
 </div>
 
+
+<div class="basic-window" id="secret-music-directory-window">
+    <div class="window-header">
+        <div class="window-drag-area"></div>
+        <div class="name-icon">
+            <img src="img/secret-music.png"alt="" class="corner-img header-item">
+            <span class="directory-title header-item">Secret Music</span>
+        </div>
+        <div class="window-controls">
+            <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
+            <div class="top-btn header-item maximize" style="background-image: url('icons/maximize.png');"></div>
+            <div class="top-btn header-item close" style="background-image: url('icons/x.png');"></div>
+        </div>
+    </div>
+    <iframe class="window-content" id="music-directory-iframe" src="secret-music-directory/index.html" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
+</div>
+
 <div class ="basic-window" id="music-player-window">
 <div class="window-header">
     <div class="window-drag-area"></div>
     <div class="name-icon">
-        <img src="img/wincd.png"alt="" class="corner-img header-item">
+        <img src="img/musicplayer.png"alt="" class="corner-img header-item">
         <span class="directory-title header-item">Music Player</span>
     </div>
     <div class="window-controls">
@@ -182,7 +207,7 @@
         <div class="window-drag-area"></div>
         <div class="name-icon">
             <img src="img/3d.png"alt="" class="corner-img header-item">
-            <span class="directory-title header-item">WHO?WHAT?WHERE?</span>
+            <span class="directory-title header-item">?????</span>
         </div>
         <div class="window-controls">
             <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
@@ -193,6 +218,21 @@
     <iframe class="window-content" id="about-iframe" src="about/index.html" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
 </div>
 
+<div class="basic-window" id="shop-window">
+    <div class="window-header">
+        <div class="window-drag-area"></div>
+        <div class="name-icon">
+            <img src="img/shop.png"alt="" class="corner-img header-item">
+            <span class="directory-title header-item">Shop</span>
+        </div>
+        <div class="window-controls">
+            <div class="top-btn header-item minimize" style="background-image: url('icons/minimize.png');"></div>
+            <div class="top-btn header-item maximize" style="background-image: url('icons/maximize.png');"></div>
+            <div class="top-btn header-item close" style="background-image: url('icons/x.png');"></div>
+        </div>
+    </div>
+    <iframe class="window-content" id="shop-iframe" src="shop/index.html" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" frameborder="0"></iframe>    
+</div>
 
 
 

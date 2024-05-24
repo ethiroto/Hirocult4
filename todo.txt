@@ -1,9 +1,8 @@
 TO DO:
--add secret music
+-random color pick for background
 -window pop up animation?
 -Journal window
 -Journal/Gallery
--Window Placement for Desktop
 
 
 COMPLETE:
@@ -15,7 +14,13 @@ COMPLETE:
 -Fix Drag for comp X
 -where do windows pop up? X
 -background? 
-    -color picker?
+    -color picker
+-Refactor music Script 
+-add secret music (make this a seperate icon/window)
+-Iconlink secret music
+-Window Placement for Desktop
+-Update Content
+-add more polish to secret music (? btn etc)
 
 
 IDeas:

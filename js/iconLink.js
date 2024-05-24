@@ -3,8 +3,10 @@ let apps = [
     { icon: "music-player-icon", window: "music-player-window", state: "open"},
     { icon: "unreleased-music-icon", window: "music-directory-window", state: "closed" },
     { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
-    { icon: "about-icon",window:"about-window",state:"open"},
-    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"closed"}
+    { icon: "about-icon",window:"about-window",state:"closed"},
+    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"},
+    {icon:"secret-music-icon", window:"secret-music-directory-window",state:"closed"},
+    {icon:"shop-icon",window:"shop-window",state:'closed'}
 ];
 
 highestZIndex=0;
@@ -24,6 +26,12 @@ $(document).ready(function() {
     for (let i in apps){
         let application=apps[i];
         if (application.state==='closed'){
+            //have to have a special conditional for shop window because otherwise it won't load in time
+            if(application.window==='shop-window'){
+                let iframe=$('#shop-window').find('iframe');
+                console.log(iframe);
+                iframe.attr('src', iframe.attr('src'));
+            }
             $('#'+application.window).addClass('minimized');
         }else{
             $('#'+application.window).removeClass('minimized');
@@ -54,12 +62,19 @@ $(document).ready(function() {
         toggleWindow(apps[0]);
     }
     });
+
+    window.addEventListener('secretDirectoryClick', function(e) {
+
+        if (apps[1].state==="closed"){
+            toggleWindow(apps[1]);
+        }
+      });
       
 
 
 //WINDOW TOP BUTTON CONTROLS
     //close window
-    $('.window-controls').on('click', '.close', function() {
+    $('.window-controls').on('click', '.close', function closeWindow() {
         // Find the closest ancestor with class 'basic-window' and toggle its class
         var parentWindowId = $(this).closest('.basic-window').attr('id');
         identifiedApp = apps.find(app => app.window === parentWindowId);

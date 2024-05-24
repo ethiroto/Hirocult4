@@ -7,8 +7,10 @@ function addVideo(videoName,videoLink){
     videoList.push(newVideo);
 }
 
+addVideo('Automatic','https://www.youtube.com/embed/BXYjJ5zIrAQ?si=29ITQCrqfmCXf0tG')
 addVideo('dreams','https://www.youtube.com/embed/z63cjCbOU8I?si=P1bUz7BtsQ0StKQ7');
 addVideo('moron','https://www.youtube.com/embed/Aux_E9aJJic?si=-LC2_h63Ma5QzidX');
+
 
 console.log(videoList);
 
