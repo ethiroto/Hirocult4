@@ -16,12 +16,12 @@
 
 @media (max-width: 450px) {
     .basic-window {
-        scale:.6;
+        zoom:.6;
     }
 }
 @media (max-width: 400px) {
     .basic-window {
-        scale:.5;
+        zoom:.5;
     }
 }
 .window-header {

@@ -1,10 +1,10 @@
 $(function() {
-    var movementFactor = window.matchMedia("(max-width: 600px)").matches ? 1.3 : 1;
+    var movementFactor = window.matchMedia("(max-width: 600px)").matches ? 1.45 : 1;
     var mediaQueryList = window.matchMedia("(max-width: 600px)");
 
     // Listen to changes in media queries
     mediaQueryList.addListener(function(e) {
-        movementFactor = e.matches ? 1.3 : 1;
+        movementFactor = e.matches ? 1.5 : 1;
     });
 
     // Create Draggable instances for each .basic-window
