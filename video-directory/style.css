@@ -13,24 +13,31 @@ body {
     font-family: 'Windows95', sans-serif; /* Set font for the entire body */
     font-size:12px;
     overflow:hidden;
+    
 }
 
 @media (max-width: 600px) {
     body{
         font-size:17px;
     }
+
+}
+
+@media (max-width: 400px) {
+    body{
+        font-size:17px;
+    }
+
 }
 
 .video-container {
-    display: flex;
-    flex-flow: row wrap; /* Combine flex-direction and flex-wrap */
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px; /* Consistent spacing between videos */
-    padding: 10px; /* Add padding to the container */
-    width: 100%; /* Allow container to fill available space */
-    max-width: 96vw; /* Limit max width for better readability */
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* This will create a 5-column grid */
+    grid-gap: 4px; /* This sets the gap between grid items */
+    align-content: start;
+    padding:15px;
+    gap: 15px; 
+    text-wrap:wrap;
 }
 
 .video {
@@ -39,10 +46,12 @@ body {
     align-items: center;
     text-align: center;
     border: 2px solid transparent;
-    padding: 10px;
+    padding: 0px;
     cursor: pointer;
     transition: background-color 0.15s, border-color 0.15s;
     background-color: transparent;
+    width:80px;
+    text-wrap:wrap;
 }
 
 .video:hover {

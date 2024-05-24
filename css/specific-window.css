@@ -96,9 +96,8 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     
     #video-player {
-        position:fixed;
-        top:45%;
-        left:-80px;
+        bottom:20vh;
+        right:10vw;
     
     }
     
@@ -108,8 +107,8 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     
     #music-directory-window{
-        top: 35vh;
-        left: -50px;
+        bottom: 10vh;
+        right:70px;
     }
     
     #secret-music-directory-iframe{
@@ -118,8 +117,8 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     
     #secret-music-directory-window{
-        top: 40vh;
-        left: -52px;
+        top: 30vh;
+        right: 16vw;
     }
     
     
@@ -129,7 +128,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     #music-player-window{
         top: 30vh;
-        left: 20vw;
+        right:5vw;
     }
     
     #video-directory-iframe{
@@ -147,7 +146,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     #bulletin-window{
         top: 0vw;
-        left: 20vw;
+        right: 5vw;
     }
     
     #about-iframe{
@@ -156,7 +155,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     }
     #about-window{
         bottom: 30vw;
-        left: 5vw;
+        right: 10vw;
     }
 
     #shop-iframe{
@@ -174,8 +173,8 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
         }
     }
     #shop-window{
-        top: 0vh;
-        right: 0vw;
+        top: 10vh;
+        right: 30vw;
     }
 
     .close-enhancer{

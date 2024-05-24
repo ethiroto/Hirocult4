@@ -1,6 +1,4 @@
 TO DO:
--Fix window arrangements (mobile)
--Fix video directory
 -Load time for music
 -window pop up animation?
 -Journal window
@@ -25,6 +23,8 @@ COMPLETE:
 -random color pick for background
 -Mobile windows open different ones
 -fatter mobile window buttons
+-Fix window arrangements (mobile)
+-Fix video directory
 
 
 IDeas:
