@@ -46,7 +46,7 @@ body.desktop {
 
 #video-directory-iframe{
     width: 350px;
-    height: 200px;
+    height: 250px;
 }
 #video-directory-window{
     top: 50vh;
@@ -64,7 +64,7 @@ body.desktop {
 
 #about-iframe{
     width: 400px;
-    height: 260px;
+    height: 280px;
 }
 #about-window{
     top: 20vh;
@@ -134,7 +134,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     
     #video-directory-iframe{
         width: 350px;
-        height: 200px;
+        height: 240px;
     }
     #video-directory-window{
         top: 20vw;
@@ -152,7 +152,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
     
     #about-iframe{
         width: 400px;
-        height: 260px;
+        height: 280px;
     }
     #about-window{
         bottom: 30vw;

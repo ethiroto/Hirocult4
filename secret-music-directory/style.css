@@ -19,6 +19,12 @@
     animation: fadeAway 1s forwards;
 }
 
+@media (max-width: 600px) {
+    body{
+        font-size:20px;
+    }
+}
+
 @keyframes fadeAway {
     0% {
         filter: none;
@@ -143,6 +149,7 @@
     width:300px;
     opacity:0;
     color:rgb(0, 0, 0);
+    font-size:16px;
 }
 
 

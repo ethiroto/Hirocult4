@@ -1,50 +1,57 @@
 @font-face {
     font-family: 'Windows95';
-    src: url('../fonts/w95fa.woff2') format('woff2');
-    /* Add 'format' based on your font file format */
+    src: url('../fonts/w95fa.woff2') format('woff2'); 
     font-weight: normal;
     font-style: normal;
-  }
-
-body{
-    background-color:#fad6ff;
-    height: 100%;
-    margin: 0;
 }
 
-.video-container{
+body {
+    background-color: #fad6ff;
+    min-height: 100vh; /* Ensure content fills the viewport */
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-family: 'Windows95', sans-serif; /* Set font for the entire body */
+    font-size:12px;
+    overflow:hidden;
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size:17px;
+    }
+}
+
+.video-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap; /* Combine flex-direction and flex-wrap */
     justify-content: flex-start;
     align-items: flex-start;
-    align-content:flex-start;
-    flex-wrap:wrap;
-    width: 96vw;
-    height:95vh;
+    gap: 10px; /* Consistent spacing between videos */
+    padding: 10px; /* Add padding to the container */
+    width: 100%; /* Allow container to fill available space */
+    max-width: 96vw; /* Limit max width for better readability */
+    overflow: hidden;
 }
-.video img{
-    width: 60px;
-    height: 60px;
-    align-self: center;
-}
-.video{
-    margin: 10px;
-    display: flex;
-    flex-direction:column;
-    text-align: center;
-    font-family: 'Windows95', sans-serif;
-}
-
 
 .video {
-    /* ... existing styles ... */
-    transition: background-color 0.15s, border-color 0.15s; /* Smooth transitions for background and border color */
-    background-color: transparent; /* Default transparent background */
-    border: 2px solid transparent; /* Default transparent border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid transparent;
+    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+    background-color: transparent;
 }
 
 .video:hover {
-    background-color: #ccecf0; /* Light blue color on hover */
-    border-color: #b4ecfc; /* Darker light blue border on hover */
+    background-color: #ccecf0;
+    border-color: #b4ecfc;
+}
+
+.video img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px; /* Add space between image and text */
 }

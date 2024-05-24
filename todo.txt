@@ -1,5 +1,6 @@
 TO DO:
 -Fix window arrangements (mobile)
+-Fix video directory
 -Load time for music
 -window pop up animation?
 -Journal window

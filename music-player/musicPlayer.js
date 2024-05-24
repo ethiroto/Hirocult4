@@ -1,4 +1,5 @@
 $(window).on('load',function(){
+setTimeout(() => { //Wrap everything in a 1 second delay
 
 //Get the songNames from localstorage (assigned in music Directory)
 var songNames= JSON.parse(localStorage.getItem('songFiles'));
@@ -173,5 +174,5 @@ function updateSliderAndTime() {
     setTimeout(updateSliderAndTime, 1000);  // Update every second
     }
 }
-
+}, 1000); // 1000 milliseconds = 1 second delay
 });

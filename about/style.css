@@ -11,6 +11,19 @@ body{
     font-family: 'windows95', sans-serif;
 }
 
+
+@media (max-width: 600px) {
+    #social-container{
+        font-size:17px;
+    }
+    p{
+        font-size: 20px;
+    }
+    #about-txt{
+        font-size:20px;
+    }
+}
+
 #social-container{
     padding-top:40px;
 }
@@ -53,6 +66,13 @@ body{
     75% { transform: rotate(-5deg); }
 }
 
+#about-txt{
+    font-size:16.5px;
+}
+p{
+    font-size:16.5px;
+
+}
 #about-txt h1 span {
     display: inline-block;
     animation-name: jiggle;
