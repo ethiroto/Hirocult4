@@ -1,4 +1,6 @@
 TO DO:
+-Fix window arrangements (mobile)
+-Load time for music
 -window pop up animation?
 -Journal window
 -Journal/Gallery

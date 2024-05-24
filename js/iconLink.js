@@ -160,3 +160,9 @@ $(document).ready(function() {
     $(window).resize(function() {
         applyZoomBasedOnWindowSize();
     });
+
+
+
+$(document).ready(function() {
+    applyZoomBasedOnWindowSize();
+});
