@@ -63,6 +63,7 @@ $(document).ready(function() {
         // Increment and set the highest z-index for the current window
         highestZIndex++;
         $('#' + appObj.window).css('z-index', highestZIndex);
+        applyZoomBasedOnWindowSize();
         // Update the state of the app
         appObj.state = appObj.state === 'open' ? 'closed' : 'open';
     }
@@ -112,3 +113,50 @@ $(document).ready(function() {
 
 });
 
+
+//APPLY ZOOM TO CHANGING WINDOW SIZE
+    //CHANGE THE WINDOW SCALER HERE
+    let windowSizeScaler = {600: '0.7', 450: '0.6', 400: '0.5'};
+
+    // Function to apply the appropriate zoom based on the current window size
+    function applyZoomBasedOnWindowSize() {
+        let currentWidth = $(window).width();
+        let appliedZoom = '1'; // Default zoom factor
+
+        // Determine appropriate zoom factor based on current window size
+        for (let size in windowSizeScaler) {
+            if (currentWidth <= size) {
+                appliedZoom = windowSizeScaler[size];
+                break; // Stop at the first matching size from largest to smallest
+            }
+        }
+
+        // Apply zoom to all iframes
+        applyZoomToAllIframes(appliedZoom);
+    }
+
+    // Applies the zoom factor to all iframes
+    function applyZoomToAllIframes(zoomFactor) {
+        for (let i in apps) {
+            let application = apps[i];
+            let iframe = $('#' + application.window).find('iframe');
+
+            // Check if the iframe has already loaded
+            if (iframe.contents().find("body").length > 0) {
+                iframe.contents().find("body").css("zoom", zoomFactor);
+            } else {
+                // Bind the load event to apply the zoom factor
+                iframe.on('load', function() {
+                    $(this).contents().find("body").css("zoom", zoomFactor);
+                });
+            }
+        }
+    }
+
+    // Apply changes on initial load
+    applyZoomBasedOnWindowSize();
+
+    // Re-apply changes on window resize
+    $(window).resize(function() {
+        applyZoomBasedOnWindowSize();
+    });

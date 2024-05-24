@@ -1,3 +1,7 @@
+
+
+
+
 .basic-window {
     background-color: #c0c0c0; /* Gray background */
     border: 1px solid #000000; /* Black border */
@@ -8,19 +12,19 @@
 }
 
 @media (max-width: 600px) {
-    .basic-window {
-        scale:.7;
+    .window-content {
+        zoom:.7;
     }
 
 }
 
 @media (max-width: 450px) {
-    .basic-window {
+    .window-content {
         zoom:.6;
     }
 }
 @media (max-width: 400px) {
-    .basic-window {
+    .window-content {
         zoom:.5;
     }
 }
