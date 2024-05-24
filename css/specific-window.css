@@ -128,8 +128,8 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
         height: 120px;
     }
     #music-player-window{
-        top: 55vw;
-        left: 5vw;
+        top: 30vh;
+        left: 20vw;
     }
     
     #video-directory-iframe{
@@ -155,7 +155,7 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
         height: 260px;
     }
     #about-window{
-        top: 0vw;
+        bottom: 30vw;
         left: 5vw;
     }
 

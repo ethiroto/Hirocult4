@@ -1,3 +1,4 @@
+//These are initial for desktop
 let apps = [
     { icon: "videoPlayer-icon", window: "video-player", state: "open" },
     { icon: "music-player-icon", window: "music-player-window", state: "open"},
@@ -8,6 +9,24 @@ let apps = [
     {icon:"secret-music-icon", window:"secret-music-directory-window",state:"closed"},
     {icon:"shop-icon",window:"shop-window",state:'closed'}
 ];
+
+
+
+let mobileApps = [
+    { icon: "videoPlayer-icon", window: "video-player", state: "closed" },
+    { icon: "music-player-icon", window: "music-player-window", state: "open"},
+    { icon: "unreleased-music-icon", window: "music-directory-window", state: "closed" },
+    { icon: "video-folder-icon", window: "video-directory-window", state: "closed" },
+    { icon: "about-icon",window:"about-window",state:"open"},
+    {icon:"alert-bulletin-icon",window:"bulletin-window",state:"open"},
+    {icon:"secret-music-icon", window:"secret-music-directory-window",state:"closed"},
+    {icon:"shop-icon",window:"shop-window",state:'closed'}
+];
+
+if ($(window).width()<800){
+    apps=mobileApps;
+}
+
 
 highestZIndex=0;
 

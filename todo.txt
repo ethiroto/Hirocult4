@@ -1,9 +1,8 @@
 TO DO:
--random color pick for background
+-fatter mobile window buttons
 -window pop up animation?
 -Journal window
 -Journal/Gallery
-
 
 COMPLETE:
 -smoother drag.js 
@@ -21,6 +20,8 @@ COMPLETE:
 -Window Placement for Desktop
 -Update Content
 -add more polish to secret music (? btn etc)
+-random color pick for background
+-Mobile windows open different ones
 
 
 IDeas:
