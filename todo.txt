@@ -1,5 +1,4 @@
 TO DO:
--fatter mobile window buttons
 -window pop up animation?
 -Journal window
 -Journal/Gallery
@@ -22,6 +21,7 @@ COMPLETE:
 -add more polish to secret music (? btn etc)
 -random color pick for background
 -Mobile windows open different ones
+-fatter mobile window buttons
 
 
 IDeas:

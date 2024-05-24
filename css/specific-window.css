@@ -167,4 +167,12 @@ body.mobile { /* iframe is to adjust window size, window is to adjust position*/
         top: 0vh;
         right: 0vw;
     }
+
+    .close-enhancer{
+        width:50px;
+        height:40px;
+        top:-20px;
+        left:-15px;
+        position:relative;
+    }
     }
