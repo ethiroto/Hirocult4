@@ -4,6 +4,9 @@ setTimeout(() => { //Wrap everything in a 1 second delay
 //Get the songNames from localstorage (assigned in music Directory)
 var songNames= JSON.parse(localStorage.getItem('songFiles'));
 var secretSongNames= JSON.parse(localStorage.getItem('secretSongFiles'));
+var songsUnlocked= JSON.parse(localStorage.getItem('unlockedState'));
+
+
 
 //need to register the initial # of songNames
 const initialSongNamesLength=songNames.length;
@@ -46,8 +49,8 @@ $(document).on('directoryClickFromP', function(e) {
     playCD(songs[e.detail.songNameSent], e.detail.songNameSent);
   });
 
-//WHEN SECRET FOLDER GETS UNLOCKED, SIGNAL GETS SENT HERE SO THEY CAN BE ADDED TO THE SONGNAMES
-$(document).on('unlockSignalFromP', function() {
+
+function addSecretSongs(){
 if (playlistLength != (initialSongNamesLength+secretSongNames.length)) {
     for (let i = 0; i < secretSongNames.length; i++) {
         let songName = secretSongNames[i];
@@ -60,7 +63,18 @@ if (playlistLength != (initialSongNamesLength+secretSongNames.length)) {
     }
     // Update playlistLength to include secret songs
     playlistLength = songNames.length;
+    
 }
+}
+
+//CHECK IF FOLDER IS ALREADY UNLOCKED AND IF SO ADD SECRET SONGS
+if (songsUnlocked==true){
+    addSecretSongs();
+}
+
+//WHEN SECRET FOLDER GETS UNLOCKED, SIGNAL GETS SENT HERE SO THEY CAN BE ADDED TO THE SONGNAMES
+$(document).on('unlockSignalFromP', function() {
+    addSecretSongs();
 });
 
 //LISTEN FOR CLICK FROM SECRET DIRECTORY

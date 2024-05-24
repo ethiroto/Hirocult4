@@ -5,6 +5,10 @@ var songFiles = ['star_shaped','wings23','toss_keys','punch_face'];
 //This sends it to localStorage as a JSON string of the array (parse it in the musicPlayer Script)
 localStorage.setItem('secretSongFiles', JSON.stringify(songFiles));
 
+//set state of songsUnlocked
+var songsUnlocked=false;
+localStorage.setItem('unlockedState', JSON.stringify(songsUnlocked));
+
 function clearDirectory() {
     $('.directory-content').empty(); // Clear the directory
 }
@@ -102,8 +106,9 @@ function checkPassword(){
         // Add fade-out class to trigger the animation
         passwordLock.addClass('fade-away');
         $('#unlockSound')[0].play();
+        var songsUnlocked=true;
+        localStorage.setItem('unlockedState', JSON.stringify(songsUnlocked));
         unlockSignal();
-            
         // Remove the element from the DOM after the animation completes
         setTimeout(function() {
             passwordLock.remove();
