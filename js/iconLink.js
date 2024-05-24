@@ -166,3 +166,8 @@ $(document).ready(function() {
 $(document).ready(function() {
     applyZoomBasedOnWindowSize();
 });
+
+$(window).on('load', function(){
+    console.log('loaded!');
+    applyZoomBasedOnWindowSize();
+});

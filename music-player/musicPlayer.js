@@ -1,3 +1,5 @@
+$(window).on('load',function(){
+
 //Get the songNames from localstorage (assigned in music Directory)
 var songNames= JSON.parse(localStorage.getItem('songFiles'));
 var secretSongNames= JSON.parse(localStorage.getItem('secretSongFiles'));
@@ -172,4 +174,4 @@ function updateSliderAndTime() {
     }
 }
 
-
+});
